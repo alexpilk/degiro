@@ -424,7 +424,7 @@ const create = ({
         )
             .then(res => res.json())
             .then(checkSuccess)
-            .then(json => ({order, confirmationId: json.confirmationId}));
+            .then(json => ({order, confirmationId: json.data.confirmationId}))
     };
 
     /**
@@ -448,7 +448,7 @@ const create = ({
         )
             .then(res => res.json())
             .then(checkSuccess)
-            .then(json => ({orderId: json.orderId}));
+            .then(json => ({orderId: json.data.orderId}));
     };
 
     /**
